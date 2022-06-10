@@ -1,13 +1,13 @@
 package edu.escuelaing.arsw.app;
 
 import java.io.File;
-import java.util.LinkedList;
+// import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Calculator {
 
-    private static List<Double> numbersList = new LinkedList<Double>();
+    private static List<Double> numbersList = new OpLinkedList<Double>();
 
     public static void main(String[] args) throws Exception {
         fileConverter(args[0]);
@@ -22,6 +22,7 @@ public class Calculator {
             String number = scan.nextLine().strip();
             numbersList.add(Double.parseDouble(number));
         }
+        scan.close();
     }
 
     public static Double mean(List<Double> numList) {

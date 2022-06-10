@@ -12,6 +12,7 @@ public class Calculator {
     public static void main(String[] args) throws Exception {
         fileConverter(args[0]);
         System.out.println(mean(numbersList));
+        System.out.println(standardDeviation(numbersList));
     }
 
     public static void fileConverter(String path) throws Exception {
@@ -25,11 +26,21 @@ public class Calculator {
 
     public static Double mean(List<Double> numList) {
         double mean = 0;
-        for (int i = 0; i < numList.size(); i++) {
-            mean += numList.get(i);
+        for (Double num : numList) {
+            mean += num;
         }
         mean = Math.round((mean / numList.size()) * 100.0) / 100.0;
         return mean;
+    }
+
+    public static double standardDeviation(List<Double> numList) {
+        Double mean = mean(numList);
+        Double sd = (double) 0;
+        for (Double num : numList) {
+            sd += Math.pow(num - mean, 2);
+        }
+        sd = Math.round((Math.sqrt(sd / (numList.size() - 1))) * 100.0) / 100.0;
+        return sd;
     }
 
 }

@@ -25,7 +25,7 @@ Se realizaron 167 lineas de codigo en aproximadamente 4 horas de trabajo, es dec
 
 ### Diagrama de clases
 
-[![image.png](https://i.postimg.cc/wBNr2KWz/image.png)](https://postimg.cc/d7qnQfPN)
+[![image.png](https://i.postimg.cc/65spgmhT/image.png)](https://postimg.cc/c6mW8T2N)
 
 ### Descripcion diagrama de clases
 

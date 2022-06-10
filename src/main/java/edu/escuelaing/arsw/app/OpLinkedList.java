@@ -11,14 +11,23 @@ public class OpLinkedList<T> implements List {
     private Node tail;
     private int len = 0;
 
+    /**
+     * Constructor de la clase OpLinkedList.
+     */
     public OpLinkedList() {
     }
 
+    /**
+     * Retorna la longitud de la lista enlazada.
+     */
     @Override
     public int size() {
         return len;
     }
 
+    /**
+     * Adiciona un nodo a la lista enlazada.
+     */
     @Override
     public boolean add(Object e) {
         len += 1;
@@ -33,6 +42,9 @@ public class OpLinkedList<T> implements List {
         return true;
     }
 
+    /**
+     * Permite recorrer la lista enlazada.
+     */
     @Override
     public Iterator iterator() {
         Iterator<Object> iterator = new Iterator<Object>() {
@@ -61,6 +73,9 @@ public class OpLinkedList<T> implements List {
         return iterator;
     }
 
+    /**
+     * Verifica si la lista enlazada se encuentra vacia.
+     */
     @Override
     public boolean isEmpty() {
         return head.getValue() == null;

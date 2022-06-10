@@ -15,9 +15,13 @@ public class Calculator {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        numbersList = fileConverter(args[0]);
-        System.out.println(mean(numbersList));
-        System.out.println(standardDeviation(numbersList));
+        try{
+            numbersList = fileConverter(args[0]);
+            System.out.println(mean(numbersList));
+            System.out.println(standardDeviation(numbersList));
+        }catch(Exception e){
+            System.out.println("Verifique el path del archivo o que este contenga unicamente numeros.");
+        }
     }
 
     /**

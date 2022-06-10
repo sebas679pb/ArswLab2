@@ -33,8 +33,7 @@ public class CalculatorTest {
     @Test
     public void deberiaRealizarMediaDocumento2() {
         try {
-            List<Double> numList = Calculator
-                    .fileConverter("src\\main\\java\\edu\\escuelaing\\arsw\\app\\DevelopmentHours.txt");
+            List<Double> numList = Calculator.fileConverter("src\\main\\java\\edu\\escuelaing\\arsw\\app\\DevelopmentHours.txt");
             Assert.assertEquals((Double) 60.32, Calculator.mean(numList));
         } catch (Exception e) {
             fail();
@@ -44,8 +43,7 @@ public class CalculatorTest {
     @Test
     public void deberiaRealizarDesviacionEstandarDocumento2() {
         try {
-            List<Double> numList = Calculator
-                    .fileConverter("src\\main\\java\\edu\\escuelaing\\arsw\\app\\DEvelopmentHours.txt");
+            List<Double> numList = Calculator.fileConverter("src\\main\\java\\edu\\escuelaing\\arsw\\app\\DEvelopmentHours.txt");
             Assert.assertEquals((Double) 62.26, Calculator.standardDeviation(numList));
         } catch (Exception e) {
             fail();

@@ -10,22 +10,25 @@ public class Calculator {
     private static List<Double> numbersList = new OpLinkedList<Double>();
 
     /**
-     * Programa que calcula la media y la desviacion estandar dado un archivo de numeros.
+     * Programa que calcula la media y la desviacion estandar dado un archivo de
+     * numeros.
+     * 
      * @param args
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        try{
+        try {
             numbersList = fileConverter(args[0]);
-            System.out.println(mean(numbersList));
-            System.out.println(standardDeviation(numbersList));
-        }catch(Exception e){
+            System.out.println("La media del grupo de datos analizados es: " + mean(numbersList));
+            System.out.println("La desviacion estandar del grupo de datos analizados es: " + standardDeviation(numbersList));
+        } catch (Exception e) {
             System.out.println("Verifique el path del archivo o que este contenga unicamente numeros.");
         }
     }
 
     /**
      * Metodo que lee un archivo y digita los numeros en una lista enlazada.
+     * 
      * @param path as String
      * @return Lista enlazada de numeros.
      * @throws Exception
@@ -44,6 +47,7 @@ public class Calculator {
 
     /**
      * Metodo que calcula la media dada una lista de numeros.
+     * 
      * @param numList as linkedList.
      * @return media de la lista.
      */
@@ -58,6 +62,7 @@ public class Calculator {
 
     /**
      * Metodo que calcula la desviacion estandar dada una lista de numeros.
+     * 
      * @param numList as linkedList.
      * @return desviacion estandar de la lista.
      */
